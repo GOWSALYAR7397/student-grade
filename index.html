@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let student = {
+    id: "",
+    name: "",
+    marks: [],
+    total: 0,
+    percentage: 0,
+    grade: ""
+  };
+  
+  
+  student.id = "B7E17403";
+  student.name = "Navonikasara M";
+  
+  student.marks = [85, 90, 78, 92, 88];
+  
+  
+  student.total = student.marks.reduce((a, b) => a + b, 0);
+  
+ student.percentage = (student.total / (student.marks.length * 100)) * 100;
+  
+
+  if (student.percentage > 90) 
+  {
+    student.grade = 'A';
+  } 
+  else if (student.percentage > 80 && student.percentage <= 90) 
+  {
+    student.grade = 'B';
+
+  } 
+  else if (student.percentage > 70 && student.percentage <= 80)
+  
+   {
+    student.grade = 'C';
+  }
+   else if (student.percentage > 60 && student.percentage <= 70)
+    {
+    student.grade = 'D';
+  }
+   else if (student.percentage > 50 && student.percentage <= 60)
+    {
+    student.grade = 'E';
+  }
+   else 
+   {
+    student.grade = 'Fail';
+  }
+  
+
+  console.log(`Student ID: ${student.id}`);
+  console.log(`Student Name: ${student.name}`);
+  console.log(`Marks: ${student.marks}`);
+  console.log(`Total: ${student.total}`);
+  console.log(`Percentage: ${student.percentage.toFixed(2)}%`);
+  console.log(`Grade: ${student.grade}`);
+  
+  </script>
+</body>
+</html>
